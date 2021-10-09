@@ -47,7 +47,7 @@
         ],
         "vconcat": [
             {
-                "title":{"text": "Yearly CO2 Emissions", "align": "center"},
+                "title":{"text": "Yearly CO2 Emissions per capita", "align": "center"},
                 "width":1180,
                 "height":120,
                 "layer": [
@@ -72,7 +72,7 @@
                             "aggregate": "sum",
                             "field": "CO2 Emission",
                             "type": "quantitative",
-                            "title": "CO2 (metric tonnes per capita)"
+                            "title": "CO2 (metric tonnes)"
                             
                         },
                         "color":{
@@ -104,7 +104,7 @@
             },
             {
                "title": {
-                   "text": "Yearly GDP ($USD)",
+                   "text": "Yearly GDP ($USD) per capita",
                    "align": "center"
                },
                "width":1180,
@@ -149,9 +149,8 @@
                             "title": "Continent"
                         },
                         {
-                            "field": "GPD",
-                            "type": "ordinal",
-                            "format": ".3f",
+                            "field": "GDP",
+                            "format": ",.2f",
                             "title": "GDP ($USD)"
                             }
                         ]            
