@@ -86,6 +86,9 @@
                             "filter": "datum.Year == year"
                         },
                         {
+                            "filter": "datum['CO2 Emission'] > 0"
+                        },
+                        {
                             "calculate": "datum['CO2 Emission']",
                             "as": "CO2Emission"
                         }
@@ -105,6 +108,7 @@
                             "field": "CO2Emission",
                             "type": "quantitative",
                             "scale": {
+                                "type": "log",
                                 "range":["lightgreen","red"]
                             },
                             "title": "Emission per captia"

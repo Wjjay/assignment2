@@ -185,10 +185,25 @@
                          "type": "quantitative",
                          "title": "Temperature Change (°C)"
                      },
-                     "color":{
-                         "field":"Continent_Name",
-                         "type": "nominal"
-                     },
+                     "color": {
+                        "field": "Continent_Name",
+                        "type": "nominal", 
+                        "scale": { 
+                            "domain": [ 
+                                "Africa", 
+                                "Asia", 
+                                "Europe", 
+                                "North America", 
+                                "Oceania", 
+                                "South America" 
+                            ], 
+                        "range": [ 
+                            "#EB2B91", 
+                            "#E6E318", 
+                            "#26EBDD", 
+                            "#FC8F68", 
+                            "#2128E0", 
+                            "#EBC14A" ] } },
          
                      "tooltip": [
                          
