@@ -4,8 +4,9 @@
     
 }
 
-#content{
+.vis{
     padding-top: 24px;
+    padding-left: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,16 +23,31 @@
 
 }
 
-canvas {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
- }
 
 .vega-bindings{
     display: block;
     text-align: center;
 }
 
+.context{
+    text-align: center;
+    
+}
+
+.leftBlock{
+    margin-left: 15%;
+    padding: 20px;
+    width: 30%;
+    float: left;
+}
+
+.rightBlock{
+    margin-right: 15%;
+    padding: 20px;
+    width: 30%;
+    float: right;
+}
+
+#subtitle{
+    padding-top: 10%;
+}
