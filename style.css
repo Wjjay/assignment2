@@ -1,7 +1,37 @@
 #title, #content{
+    font-family: 'Open Sans';
+    margin: auto;
+    
+}
+
+#content{
+    padding-top: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Open Sans';
+    flex-direction: column;
+}
+
+#title{
+    text-align: center;
+}
+
+#continentLines, #map{
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+ }
+
+.vega-bindings{
+    display: block;
+    text-align: center;
 }
 
