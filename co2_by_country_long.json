@@ -109,7 +109,7 @@
                             "type": "quantitative",
                             "scale": {
                                 "type": "log",
-                                "range":["lightgreen","red"]
+                                "range":["blue","orange"]
                             },
                             "title": "Emission per captia"
                         },

@@ -99,6 +99,33 @@
                                 }
                             ]            
                         }
+                    },
+                    {
+                        "encoding":{
+                            "x":{"datum":2007}
+                        },
+                        "layer":[
+                            {
+                                "mark": "rule",
+                                "encoding": {
+                                    "size": {
+                                        "value": 0.01
+                                    }
+                                }
+                            },
+                            {
+                                "mark":{
+                                    "type": "text",
+                                    "align":"left",
+                                    "baseline": "top",
+                                    "dx": 3,
+                                    "dy": 4,
+                                    "y":0,
+                                    
+                                    "text": "Start of the Great Recession"
+                                }
+                            }
+                        ]
                     }
                 ]
             },
@@ -155,6 +182,22 @@
                             }
                         ]            
                     }
+                },
+                {
+                    "encoding":{
+                        "x":{"datum":2007}
+                    },
+                    "layer":[
+                        {
+                            "mark": "rule",
+                            "encoding": {
+                                "size":{
+                                    "value": 0.01
+                                }
+                            }
+
+                        }
+                    ]
                 }
                   
             ]
@@ -222,7 +265,22 @@
                              }
                          ]            
                      }
-                 }
+                 },
+                 {
+                    "encoding":{
+                        "x":{"datum":2007}
+                    },
+                    "layer":[
+                        {
+                            "mark": "rule",
+                            "encoding": {
+                                "size": {
+                                    "value": 0.01
+                                }
+                            }
+                        }
+                    ]
+                }
                    
              ]
              }
