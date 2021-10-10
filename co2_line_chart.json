@@ -32,7 +32,7 @@
             }   
         ],
         "data": {
-            "url": "data/continent_data.csv"
+            "url": "data/finalised_temp_gdp_co2.csv"
             },
         "transform": [
             {"filter": "datum.Year >= 1961"},
@@ -116,10 +116,10 @@
                             {
                                 "mark":{
                                     "type": "text",
-                                    "align":"left",
+                                    "align":"right",
                                     "baseline": "top",
-                                    "dx": 3,
-                                    "dy": 4,
+                                    "dx": -3,
+                                    "dy": 1,
                                     "y":0,
                                     
                                     "text": "Start of the Great Recession"
