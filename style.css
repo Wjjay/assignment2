@@ -1,11 +1,12 @@
 #title, #content{
     font-family: 'Open Sans';
     margin: auto;
+    text-align: center;
     
 }
 
 .vis{
-    padding-top: 24px;
+    padding-top: 12px;
     padding-left: 5%;
     display: flex;
     justify-content: center;
@@ -31,7 +32,8 @@
 
 .context{
     text-align: center;
-    
+    color:#565657;    
+    padding-top: 1%;
 }
 
 .leftBlock{
@@ -42,12 +44,19 @@
 }
 
 .rightBlock{
-    margin-right: 15%;
+    margin-right: 18%;
     padding: 20px;
     width: 30%;
     float: right;
 }
 
+.singleBlock{
+    margin-left: 16%;
+    padding: 5px;
+    width: 65%;
+    float: left;
+}
+
 #subtitle{
-    padding-top: 10%;
+    padding-top: 9%;
 }

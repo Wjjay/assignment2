@@ -1,0 +1,49 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width":1200,
+    "height":300,
+    "title": "Global Uranium Production (tonnes)",
+    "data": {
+        "url": "data/uranium_production.csv"
+    },
+    "transform": [
+    ],
+    "mark": "area",
+    "encoding": {
+        "x": {
+            "field": "Year",
+            "type": "quantitative",
+            "scale": {
+                "domain": [2011, 2020]
+            },
+            "axis": {
+                "tickCount": 9,
+                "format": ""
+            }
+        },
+        "y": {
+            "field": "Uranium Produced",
+            "aggregate": "sum",
+            "type": "quantitative"  
+        },
+        "color": {
+            "field": "Country",
+            "type": "nominal"
+        },
+        "tooltip":[
+            {
+                "field": "Year",
+                "type": "quantitative"
+            },
+            {
+                "field":"Country",
+                "type": "nominal"
+            },
+            {
+                "field": "Uranium Produced",
+                "type": "quantitative",
+                "format": ","
+            }
+        ]        
+    }    
+}

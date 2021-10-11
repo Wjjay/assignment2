@@ -47,7 +47,7 @@
         ],
         "vconcat": [
             {
-                "title":{"text": "Yearly CO2 Emissions per capita", "align": "center"},
+                "title":{"text": "Yearly CO2 Emissions", "align": "center"},
                 "width":1180,
                 "height":120,
                 "layer": [
@@ -114,6 +114,9 @@
                                 }
                             },
                             {
+                                "data":{
+                                    "url": "data/dummy.csv"
+                                },
                                 "mark":{
                                     "type": "text",
                                     "align":"right",
