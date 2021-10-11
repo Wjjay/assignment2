@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "height": 300,
+    "height": 150,
     "width":1200,
     "params": [
         {
@@ -26,147 +26,71 @@
             }
         }   
     ],
-    "vconcat":[
+
+    "title": {
+        "text": "Australian electricity consumption by sources"
+    },
+    "data":{
+        "url": "data/australian_energy_consumption.csv"
+    },
+    "transform": [
         {
-            "height":150,
-            "width":1200,
-            "title": {
-                "text": "Australian electricity consumption by sources"
-            },
-            "data":{
-                "url": "data/australian_energy_consumption.csv"
-            },
-            "transform": [
-                {
-                    "filter": "datum.Year > 1999"
-                },
-                {
-                    "filter": "sourceSelect == null || datum.Source == sourceSelect"
-                }
-            ],
-            "mark": "bar",
-            "encoding": {
-                "x": {
-                    "field": "Year",
-                    "type": "quantitative",
-                    "axis": {
-                        "tickCount": 20, 
-                        "format": "", 
-                        "labels":false,
-                        "title": ""  
-                    }                    
-                },
-                "y": {
-                    "field":"Energy",
-                    "aggregate": "sum",
-                    "type": "quantitative",
-                    "title": "Electricity (PJ)"
-                },
-                "color":{
-                    "field":"Source",
-                    "type": "nominal",
-                    "scale":{
-                        "domain": [
-                            "Coal",
-                            "Gas",
-                            "Oil",
-                            "Renewables"
-                        ],
-                        "range":[
-                            "#56C9DB",
-                            "#F02E6E",
-                            "#D9903D",
-                            "#0FF501"
-                        ]
-                    }
-                },
-                "tooltip":[
-                    {
-                        "field": "Year"
-                    },
-                    {
-                        "field": "Sector"
-                    },
-                    {
-                        "field": "Energy",
-                        "type": "quantitative",
-                        "format": ",",
-                        "title": "Electricity (Petajoules)"
-                    }
+            "filter": "datum.Year > 1999"
+        },
+        {
+            "filter": "sourceSelect == null || datum.Source == sourceSelect"
+        }
+    ],
+    "mark": "bar",
+    "encoding": {
+        "x": {
+            "field": "Year",
+            "type": "quantitative",
+            "axis": {
+                "tickCount": 20, 
+                "format": "", 
+                "labels":false,
+                "title": ""  
+            }                    
+        },
+        "y": {
+            "field":"Energy",
+            "aggregate": "sum",
+            "type": "quantitative",
+            "title": "Electricity (PJ)"
+        },
+        "color":{
+            "field":"Source",
+            "type": "nominal",
+            "scale":{
+                "domain": [
+                    "Coal",
+                    "Gas",
+                    "Oil",
+                    "Renewables"
+                ],
+                "range":[
+                    "#56C9DB",
+                    "#F02E6E",
+                    "#D9903D",
+                    "#0FF501"
                 ]
             }
         },
-        {
-            "height":150,
-            "width":1200,
-            "title": {
-                "text": "Australian electricity consumption by sector"
+        "tooltip":[
+            {
+                "field": "Year"
             },
-            "data":{
-                "url": "data/energy_by_sector.csv"
+            {
+                "field": "Sector"
             },
-            "transform": [
-                {
-                    "filter": "datum.Year > 1999"
-                }
-            ],
-            "mark": "bar",
-            "encoding": {
-                "x": {
-                    "field": "Year",
-                    "type": "quantitative",
-                    "axis": {
-                        "tickCount": 20, 
-                        "format": ""
-                    }                    
-                },
-                "y": {
-                    "field":"Energy",
-                    "aggregate": "sum",
-                    "type": "quantitative",
-                    "title": "Electricity (PJ)"
-                },
-                "color": {
-                    "field": "Sector",
-                    "type": "nominal",
-                    "scale":{
-                        "domain":[
-                            "Transport",
-                            "Electricity Supply",
-                            "Manufacturing",
-                            "Mining",
-                            "Residential",
-                            "Commercial",
-                            "Other"
-                        ],
-                        "range": [
-                            "#41FAC5",
-                            "#FA0A01",
-                            "#F4F216",
-                            "#DEB810",
-                            "#75F46C",
-                            "#35CAFB",
-                            "#B935FB"
-                        ]
-                    }
-                },
-                "tooltip":[
-                    {
-                        "field": "Year"
-                    },
-                    {
-                        "field": "Sector"
-                    },
-                    {
-                        "field": "Energy",
-                        "type": "quantitative",
-                        "format": ",",
-                        "title": "Electricity (Petajoules)"
-                    }
-                ]
+            {
+                "field": "Energy",
+                "type": "quantitative",
+                "format": ",",
+                "title": "Electricity (Petajoules)"
             }
-        }
-    ],
-    "resolve": {"legend": {"color": "independent"}}
+        ]
+    }
 
 }
