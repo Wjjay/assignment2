@@ -34,6 +34,7 @@
     text-align: center;
     color:#565657;    
     padding-top: 1%;
+    font-size: 15px;
 }
 
 .leftBlock{
@@ -59,4 +60,8 @@
 
 #subtitle{
     padding-top: 9%;
+}
+
+.vega-embed.has-actions {
+    padding-left: 90px;
 }
