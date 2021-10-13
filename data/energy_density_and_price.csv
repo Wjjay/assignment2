@@ -1,0 +1,5 @@
+Fuel,Heat value,Measurement,Price,Fuelweight,PricePerKg,HeatPerDollar,CO2perGJ,CO2perMJ,CO2perKg
+Crude oil,44.5,MJ/kg,80.68,barrel,0.592895251,75.05541646,73.3,0.0733,3.26185
+Natural gas,48.5,MJ/kg,5.412,MMBtu,0.256492891,189.0890613,55.82,0.05582,2.70727
+Coal,24,MJ/kg,242.35,Tonne,0.24235,99.03032804,94.6,0.0946,2.2704
+Natural uranium,500000,MJ/kg,39.7,Lbs,87.523414,5712.757046,0,0,0

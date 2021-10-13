@@ -1,13 +1,13 @@
 Fuel,Heat value,Measurement
-Petrol/gasoline,45,MJ/kg
-Diesel fuel,44,MJ/kg
+Petrol,45,MJ/kg
+Diesel,44,MJ/kg
 Crude oil,44.5,MJ/kg
-Liquefied petroleum gas (LPG),48.5,MJ/kg
+LPG,48.5,MJ/kg
 Natural gas,48.5,MJ/kg
 Black coal ,25,MJ/kg
 Sub-bituminous coal ,18,MJ/kg
 Brown coal,10,MJ/kg
-"Natural uranium, in LWR (normal reactor)",500,GJ/kg
-"Natural uranium, in LWR with U & Pu recycle",650,GJ/kg
-"Natural uranium, in FNR","28,000",GJ/kg
-"Uranium enriched to 3.5%, in LWR",3900,GJ/kg
+"Natural uranium, in LWR (normal reactor)",500000,MJ/kg
+"Natural uranium, in LWR with U & Pu recycle",650000,MJ/kg
+"Natural uranium, in FNR",28000000,MJ/kg
+"Uranium enriched to 3.5%, in LWR",3900000,MJ/kg

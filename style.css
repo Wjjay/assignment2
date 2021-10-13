@@ -63,5 +63,14 @@
 }
 
 .vega-embed.has-actions {
-    padding-left: 90px;
+    padding-left: 0px;
+}
+
+#stackedB{
+    padding-left: 21px;
+}
+
+#u{
+    color: #2EEB27;
+    text-shadow: #000 0px 0px 2px;;
 }

@@ -35,7 +35,7 @@
     },
     "transform": [
         {
-            "filter": "datum.Year > 1999"
+            "filter": "datum.Year >= 1999"
         },
         {
             "filter": "sourceSelect == null || datum.Source == sourceSelect"

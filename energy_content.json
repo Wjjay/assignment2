@@ -1,0 +1,111 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "height":500,
+    "width":1200,
+    "vconcat":[
+        {
+            "height":250,
+            "width":1200,
+            "title": "Energy density of fuels",
+            "data":{
+                "url":"data/energy_density_simplified.csv"
+            },
+            "transform":[
+
+            ],
+            "layer":[
+                {
+                    "mark": {
+                        "type": "rule",
+                        "opacity": 0.5
+                    },                    
+                    "encoding": {
+                        "x":{
+                            "field": "Fuel",
+                            "type": "ordinal"
+                        },
+                        "y":{"datum":1000000},
+                        "size": {
+                            "value": 1
+                        }
+                    }
+                },
+                {
+                    
+                    "encoding": {
+                        "x":{
+                            "field": "Fuel",
+                            "type": "ordinal"
+                        },
+                        "y":{
+                            "field": "Heat value",
+                            "type": "quantitative",
+                            "title": "Energy Density (MJ/kg)",
+                            
+                            "axis":{
+                                "tickCount": 5
+                            },
+                            "scale": {
+                                "type": "log",
+                                "domain": [1,1000000]
+                                
+                            }
+                        }
+                        
+                    },
+                    "layer":[
+                        {
+                            "mark": {
+                                "type": "line",
+                                "opacity": 0.6,
+                                "color":"brown"
+                            }
+                            
+                        },
+                        {
+                            "mark": {
+                                "type": "circle",
+                                "size": 150
+                            },
+                            "encoding": {
+                                "color":{
+                                    "field": "Fuel",
+                                    "type": "ordinal",
+                                    "scale": {
+                                        "domain": [
+                                            "Coal",                                        
+                                            "Crude oil",                                            
+                                            "Natural gas",
+                                            "Natural uranium"
+                                        ],
+                                        "range":[                                            
+                                            "#29D2E6",
+                                            "#D641E6",
+                                            "#362CFA",
+                                            "#0EE63D"                                            
+                                        ]
+                                    }
+                                },
+                                "tooltip":[
+                                    {
+                                        "field": "Fuel",
+                                        "type": "ordinal"
+                                    },
+                                    {
+                                        "field": "Heat value",
+                                        "type": "quantitative",
+                                        "format": ",",
+                                        "title": "Energy density"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                    
+                }
+                
+            ]
+            
+        }
+    ]
+}

@@ -4,9 +4,36 @@
     "height":300,
     "title": "Global Uranium Production (tonnes)",
     "data": {
-        "url": "data/uranium_production.csv"
+        "url": "data/uranium_production_new.csv"
     },
+    "params": [
+        {
+            "name": "countrySelect",
+            "value": null,
+            "bind":{
+                "input": "select",
+                "options": [
+                    null,
+                    "Australia",
+                    "Canada",
+                    "Kazakhstan",
+                    "Others"
+                ],
+                "labels": [
+                    "All",
+                    "Australia",
+                    "Canada",
+                    "Kazakhstan",
+                    "Others"
+                ],
+                "name": "Country: "            
+            }
+        }   
+    ],
     "transform": [
+        {
+            "filter": "countrySelect == null || datum['Country'] == countrySelect"
+        }
     ],
     "mark": "area",
     "encoding": {
@@ -24,11 +51,29 @@
         "y": {
             "field": "Uranium Produced",
             "aggregate": "sum",
-            "type": "quantitative"  
+            "type": "quantitative",
+            "title": "Uranium Produced (metric tonnes)"
         },
         "color": {
             "field": "Country",
-            "type": "nominal"
+            "type": "nominal",
+            "scale":{
+                "domain": [
+                    "Australia",
+                    "Canada",
+                    "Kazakhstan",
+                    "Others"
+                ]
+                ,
+                "range": [
+                    "#5CEB1A",
+                    "#DE0B58",
+                    "#2815FB",
+                    "#F6F5D6"
+    
+                ]
+            }
+            
         },
         "tooltip":[
             {

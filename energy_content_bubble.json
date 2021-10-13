@@ -1,0 +1,93 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "height":500,
+    "width":1200,
+    "vconcat":[
+        {
+            "height":250,
+            "width":1200,
+            "title": "Energy density of fuels",
+            "data":{
+                "url":"data/energy_density_and_price.csv"
+            },
+            "transform":[
+
+            ],
+            "layer":[
+                {
+                    "mark": {
+                        "type": "circle"
+                    },                    
+                    "encoding": {
+                        "y":{
+                            "field": "PricePerKg",
+                            "type": "quantitative",
+                            "scale":{
+                                "type": "log",
+                                "domain": [0.01,1000]
+                            },
+                            "axis":{
+                                "tickCount":3
+                            }
+                        },
+                        "x":{
+                            "field": "CO2perKg",
+                            "type": "quantitative"
+                        },
+                        "size":{
+                            "field":"Heat value",
+                            "scale":{
+                                "type": "log"
+                                
+                            }
+                        },
+                        "color": {
+                            "field": "Fuel",
+                            "type": "nominal",
+                            "scale": {
+                                "domain":[
+                                    "Crude oil",
+                                    "Natural gas",
+                                    "Coal",
+                                    "Natural uranium"
+                                ],
+                                "range": [
+                                    "#29D2E6",
+                                    "#D641E6",
+                                    "#362CFA",
+                                    "#0EE63D"
+                                ]
+                            }
+                        },
+                        "tooltip":[
+                            {
+                                "field": "Fuel",
+                                "type": "ordinal"
+                            },
+                            {
+                                "field": "Heat value",
+                                "type": "quantitative",
+                                "format": ",",
+                                "title": "Energy density (MJ/kg)"
+                            },
+                            {
+                                "field": "PricePerKg",
+                                "type": "quantitative",
+                                "format": "3f",
+                                "title": "Price ($USD/kg)"
+                            },
+                            {
+                                "field": "CO2perKg",
+                                "type": "quantitative",
+                                "format": "3f",
+                                "title": "CO2 per kg of fuel (kg/kg)"
+                            }
+                        ]
+                    }
+                }
+                
+            ]
+            
+        }
+    ]
+}

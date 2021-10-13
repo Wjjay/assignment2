@@ -40,7 +40,7 @@
     ],
     "transform": [
         {
-            "filter": "datum.Year > 1999"
+            "filter": "datum.Year >= 1999"
         },
         {
             "filter": "sectorSelect == null || datum.Sector == sectorSelect"
