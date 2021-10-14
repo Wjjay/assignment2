@@ -1,16 +1,16 @@
-Year,QID,Question,Reponse,Percentage
-1979,A,Do you believe Australia should develop nuclear power plants to supply electricity to Australia?,Yes,52.0
-2011,A,Do you believe Australia should develop nuclear power plants to supply electricity to Australia?,Yes,34.0
-2019,A,Do you believe Australia should develop nuclear power plants to supply electricity to Australia?,Yes,45.0
+Year,QID,Question,Response,Percentage
+1979,A,Do you believe Australia should develop nuclear power plants to supply electricity to Australia?,Yes,52
+2011,A,Do you believe Australia should develop nuclear power plants to supply electricity to Australia?,Yes,34
+2019,A,Do you believe Australia should develop nuclear power plants to supply electricity to Australia?,Yes,45
 2011,B,Do you support Australia developing nuclear power to reduce Australia�s carbon dioxide emissions or not?,Yes,35.5
-2019,B,Do you support Australia developing nuclear power to reduce Australia�s carbon dioxide emissions or not?,Yes,51.0
-1979,A,Do you believe Australia should develop nuclear power plants to supply electricity to Australia?,No,35.0
-2011,A,Do you believe Australia should develop nuclear power plants to supply electricity to Australia?,No,61.0
-2019,A,Do you believe Australia should develop nuclear power plants to supply electricity to Australia?,No,40.0
+2019,B,Do you support Australia developing nuclear power to reduce Australia�s carbon dioxide emissions or not?,Yes,51
+1979,A,Do you believe Australia should develop nuclear power plants to supply electricity to Australia?,No,35
+2011,A,Do you believe Australia should develop nuclear power plants to supply electricity to Australia?,No,61
+2019,A,Do you believe Australia should develop nuclear power plants to supply electricity to Australia?,No,40
 2011,B,Do you support Australia developing nuclear power to reduce Australia�s carbon dioxide emissions or not?,No,58.5
-2019,B,Do you support Australia developing nuclear power to reduce Australia�s carbon dioxide emissions or not?,No,34.0
-1979,A,Do you believe Australia should develop nuclear power plants to supply electricity to Australia?,Unsure,13.0
-2011,A,Do you believe Australia should develop nuclear power plants to supply electricity to Australia?,Unsure,5.0
-2019,A,Do you believe Australia should develop nuclear power plants to supply electricity to Australia?,Unsure,15.0
-2011,B,Do you support Australia developing nuclear power to reduce Australia�s carbon dioxide emissions or not?,Unsure,6.0
-2019,B,Do you support Australia developing nuclear power to reduce Australia�s carbon dioxide emissions or not?,Unsure,15.0
+2019,B,Do you support Australia developing nuclear power to reduce Australia�s carbon dioxide emissions or not?,No,34
+1979,A,Do you believe Australia should develop nuclear power plants to supply electricity to Australia?,Unsure,13
+2011,A,Do you believe Australia should develop nuclear power plants to supply electricity to Australia?,Unsure,5
+2019,A,Do you believe Australia should develop nuclear power plants to supply electricity to Australia?,Unsure,15
+2011,B,Do you support Australia developing nuclear power to reduce Australia�s carbon dioxide emissions or not?,Unsure,6
+2019,B,Do you support Australia developing nuclear power to reduce Australia�s carbon dioxide emissions or not?,Unsure,15

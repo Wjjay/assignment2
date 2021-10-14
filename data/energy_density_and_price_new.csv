@@ -1,0 +1,5 @@
+Fuel,Price ($USD/kg),Energy (MJ/$USD),CO2 (kg/kg),Energy (MJ/kg)
+Crude oil,0.592895251,75.05541646,3.26185,44.5
+Natural gas,0.256492891,189.0890613,2.70727,48.5
+Coal,0.24235,99.03032804,2.2704,24
+Natural uranium,87.523414,5712.757046,0,500000

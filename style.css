@@ -24,7 +24,6 @@
 
 }
 
-
 .vega-bindings{
     display: block;
     text-align: center;
@@ -70,7 +69,7 @@
     padding-left: 21px;
 }
 
-#u{
+.u{
     color: #2EEB27;
     text-shadow: #000 0px 0px 2px;;
 }

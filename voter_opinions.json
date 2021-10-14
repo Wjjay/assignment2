@@ -1,0 +1,120 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "height":150,
+    "width":1200,
+    "vconcat":[
+        {
+            "height":150,
+            "width":1200,
+
+            "data":{
+                "url":"data/uranium_public_perception.csv"
+            },
+            "hconcat":[
+                {
+                    "height":150,
+                    "width":600,
+                    "title": "Do you believe Australia should develop nuclear power plants to supply electricity to Australia?",
+                    "transform":[
+                        {
+                            "filter": "datum.QID=='A' & datum.Year!=1979"                            
+                        }                   
+                    ],
+                    "mark":"bar",
+                    "encoding":{
+                        "x":{
+                            "field": "Percentage",
+                            "type": "quantitative",
+                            "aggregate": "sum",
+                            "title": "Percentage (%)"
+                        },
+                        "y":{
+                            "field": "Year",
+                            "type": "ordinal"
+                        },
+                        "color":{
+                            "field":"Response",
+                            "type": "nominal",
+                            "scale":{
+                                "domain":[
+                                    "Yes",
+                                    "No",
+                                    "Unsure"
+                                ],
+                                "range":[
+                                    "blue",
+                                    "orange",
+                                    "lightgrey"
+                                ]
+                            }
+                        },
+                        "tooltip":[
+                            {
+                                "field":"Year"
+                            },
+                            {
+                                "field":"Percentage",
+                                "title": "Percentage (%)"
+                            }
+                        ]
+                        
+                    }
+                },
+                {
+                    "height":150,
+                    "width":600,
+                    "title": "Do you support Australia developing nuclear power to reduce Australia's carbon dioxide emissions or not?",
+                    "transform":[
+                        {
+                            "filter": "datum.QID=='B'"
+                        }                   
+                    ],
+                    "mark":"bar",
+                    "encoding":{
+                        "x":{
+                            "field": "Percentage",
+                            "type": "quantitative",
+                            "aggregate": "sum",
+                            "title": "Percentage (%)"
+                        },
+                        "y":{
+                            "field": "Year",
+                            "type": "ordinal",
+                            "title": "",
+                            "axis":{
+                                "labels": false
+                            }
+                        },
+                        "color":{
+                            "field":"Response",
+                            "type": "nominal",
+                            "scale":{
+                                "domain":[
+                                    "Yes",
+                                    "No",
+                                    "Unsure"
+                                ],
+                                "range":[
+                                    "blue",
+                                    "orange",
+                                    "lightgrey"
+                                ]
+                            }
+                        },
+                        "tooltip":[
+                            {
+                                "field":"Year"
+                            },
+                            {
+                                "field":"Percentage",
+                                "title": "Percentage (%)"
+                            }
+                        ]
+                        
+                    }
+                }
+            ]
+            
+        }
+    ]
+}
