@@ -1,0 +1,13 @@
+Fuel,Category,Value
+Crude oil,Price ($USD/kg),2.446442133278316
+Natural gas,Price ($USD/kg),1.0583572972972972
+Natural uranium,Price ($USD/kg),361.1446833092635
+Crude oil,Energy (MJ/$USD),0.7579033407794415
+Natural gas,Energy (MJ/$USD),1.909405583546323
+Natural uranium,Energy (MJ/$USD),57.68694458623344
+Crude oil,CO2 (kg/kg),1.4366851656095845
+Natural gas,CO2 (kg/kg),1.1924198379140238
+Natural uranium,CO2 (kg/kg),0.0
+Crude oil,Energy (MJ/kg),1.8541666666666667
+Natural gas,Energy (MJ/kg),2.020833333333333
+Natural uranium,Energy (MJ/kg),20833.33333333333

@@ -12,6 +12,26 @@
                 "step": 1,
                 "name": "Year: "
             }
+        },
+        {
+            "name": "min_emission",
+            "value": 0.001,
+            "bind":{
+                "input": "range",
+                "min": 0.001,
+                "max": 20,
+                "name": "Minimum CO2 Emission: "
+            }
+        },
+        {
+            "name": "max_emission",
+            "value": 30,
+            "bind":{
+                "input": "range",
+                "min": 0.002,
+                "max": 30,
+                "name": "Maximum CO2 Emission: "
+            }
         }            
     ],
     "vconcat": [
@@ -87,6 +107,12 @@
                         },
                         {
                             "filter": "datum['CO2 Emission'] > 0"
+                        },
+                        {
+                            "filter": "datum['CO2 Emission'] > min_emission"
+                        },
+                        {
+                            "filter": "datum['CO2 Emission'] < max_emission"
                         },
                         {
                             "calculate": "datum['CO2 Emission']",

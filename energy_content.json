@@ -2,54 +2,47 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "height":500,
     "width":1200,
+
     "vconcat":[
         {
             "height":250,
-            "width":1200,
-            "title": "Fuel types compared",
+            "width":1280,
+            "title": "Fuel types compared with coal",
             "data":{
-                "url":"data/energy_stats.csv"
+                "url":"data/fuel_compared_with_coal.csv"
             },
             "transform":[
                 {
-                    "calculate": "datum['Value'] + 10000",
+                    "calculate": "(datum['Value']+100)*100",
                     "as": "LogValue"
+                },
+                {
+                    "filter": "datum.Category != 'Energy (MJ/$USD)'"
                 }
             ],
             "layer":[
+                
                 {
-                    "mark": {
-                        "type": "rule",
-                        "opacity": 0.2
-                    },                    
-                    "encoding": {
-                        "x":{
-                            "field": "Stat",
-                            "type": "nominal"
-                        },
-                        "y":{"datum":1000000},
-                        "size": {
-                            "value": 1
+                    "transform": [
+                        {
+                            "calculate": "datum.Value * 100",
+                            "as": "Percentage"
                         }
-                    }
-                },
-                {
-                    
+                    ],                    
                     "encoding": {
                         "x":{
-                            "field": "Stat",
+                            "field": "Category",
                             "type": "nominal"
                         },
                         "y":{
                             "field": "LogValue",
                             "type": "quantitative",
-                            "title": "Value",
+                            "title": "Percentage in relation to coal",
                             "axis":{
                                 "tickCount": 5
                             },
-                            "scale": {
+                            "scale":{
                                 "type": "log"
-                                
                             }
                         },
                         "color":{
@@ -57,15 +50,13 @@
                             "type": "ordinal",
                             "scale": {
                                 "domain": [
-                                    "Coal",                                        
+                                    "Natural gas",                                        
                                     "Crude oil",                                            
-                                    "Natural gas",
                                     "Natural uranium"
                                 ],
                                 "range":[                                            
                                     "#29D2E6",
                                     "#D641E6",
-                                    "#362CFA",
                                     "#0EE63D"                                            
                                 ]
                             }
@@ -86,7 +77,7 @@
                         {
                             "mark":{
                                 "type": "circle",
-                                "size": 150
+                                "size": 250
                             },
                             "encoding": {
                                 "tooltip":[
@@ -95,20 +86,37 @@
                                         "type": "nominal"
                                     },
                                     {
-                                        "field":"Stat",
+                                        "field":"Category",
                                         "type": "nominal",
                                         "title": "Category"
                                     },
                                     {
-                                        "field":"Value",
+                                        "field":"Percentage",
                                         "type": "quantitative",
-                                        "format": ","
+                                        "format": ",.2f",
+                                        "title": "Percentage of coal (%)"
                                     }
                                 ]
                             }
                         }
                     ]
                     
+                },
+                {
+                    "mark": {
+                        "type": "rule",
+                        "opacity": 0.2
+                    },                    
+                    "encoding": {
+                        "x":{
+                            "field": "Category",
+                            "type": "nominal"
+                        },
+                        "y":{"datum":10000000},
+                        "size": {
+                            "value": 0.5
+                        }
+                    }
                 }
                 
             ]

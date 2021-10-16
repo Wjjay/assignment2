@@ -5,7 +5,7 @@
     "vconcat":[
         {
             "height":150,
-            "width":1200,
+            "width":1280,
 
             "data":{
                 "url":"data/uranium_public_perception.csv"
@@ -13,7 +13,7 @@
             "hconcat":[
                 {
                     "height":150,
-                    "width":600,
+                    "width":640,
                     "title": "Do you believe Australia should develop nuclear power plants to supply electricity to Australia?",
                     "transform":[
                         {
@@ -62,7 +62,7 @@
                 },
                 {
                     "height":150,
-                    "width":600,
+                    "width":640,
                     "title": "Do you support Australia developing nuclear power to reduce Australia's carbon dioxide emissions or not?",
                     "transform":[
                         {
