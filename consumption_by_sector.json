@@ -2,6 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "height":150,
     "width":1280,
+    "description": "This vertical stacked bar chart shows various power consuming sectors in Australia across time. It has a sector selector which lets readers examine the energy consumed by a particular sector in a vacuum.",
     "title": {
         "text": "Australian electricity consumption by sector"
     },

@@ -2,6 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width":1280,
     "height":300,
+    "description": "This area chart shows uranium production by country. It has a country selector that lets readers examine a specific uranium-producing country in a vacuum.",
     "title": "Global Uranium Production (tonnes)",
     "data": {
         "url": "data/uranium_production_new.csv"
@@ -26,7 +27,7 @@
                     "Kazakhstan",
                     "Others"
                 ],
-                "name": "Country: "            
+                "name": "Country select: "            
             }
         }   
     ],

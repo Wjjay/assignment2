@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    
+    "description": "This choropleth map shows CO2 emission per captia from around the world. It has a temporal slider, and a minimum and maximum slider",
     "params": [
         {
             "name": "year",
@@ -135,7 +135,7 @@
                             "type": "quantitative",
                             "scale": {
                                 "type": "log",
-                                "range":["blue","orange"]
+                                "range":["#109e00", "#b6faaf", "#6500b8"]
                             },
                             "title": "Emission per captia"
                         },

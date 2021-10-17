@@ -1,5 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "This annotated visualisation consists of 3 smaller charts (2 Area, 1 line) that displays various attributes for each continent that relates to CO2 emission, GDP, and average temperature change over time.",
     
         "width":1280,
         "height":720,
@@ -48,7 +49,7 @@
         "vconcat": [
             {
                 "title":{"text": "Yearly CO2 Emissions", "align": "center"},
-                "width":1180,
+                "width":1280,
                 "height":120,
                 "layer": [
                     {     
@@ -145,7 +146,7 @@
                    "text": "Yearly GDP ($USD) per capita",
                    "align": "center"
                },
-               "width":1180,
+               "width":1280,
                 "height":120,
                "layer": [
                 {     
@@ -224,7 +225,7 @@
                     "text": "Average Yearly Temperature Change",
                     "align": "center"
                 },
-                "width":1180,
+                "width":1280,
                  "height":120,
                 "layer": [
                  {     
